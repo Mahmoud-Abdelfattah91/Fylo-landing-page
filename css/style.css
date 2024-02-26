@@ -1,0 +1,441 @@
+@font-face{
+    font-family: 'Raleway';
+    src: url('../fonts/Raleway/Raleway-VariableFont_wght.ttf');
+}
+@font-face{
+    font-family:Open Sans ;
+    src: url('../fonts/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf');
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    /*Raleway font 400 700 Headings, Call-to-actions, Header Navigation*/
+    --Raleway-font:Raleway;
+    /*Open Sans font 400 Body*/
+    --Open-Sans-font:Open Sans;
+    /*font size body */
+    --Fsize-paragraph:16px;
+    /*Primary color*/
+    --Very-Dark-Blue: hsl(243, 87%, 12%);
+    --border-input:hsl(243, 87%, 12%,0.5);
+    --Desaturated-Blue: hsl(238, 22%, 44%);
+    --bg-section:hsl(240, 75%, 98%);
+    /*Accent color*/
+    --Bright-Blue: hsl(224, 93%, 58%);
+    --Moderate-Cyan: hsl(170, 45%, 43%);
+    --Moderate-Cyan-hover: hsl(170, 45%, 60%);
+    /*Neutral color*/
+    --Light-Grayish-Blue: hsl(240, 75%, 98%);
+    --Light-Gray: hsl(0, 0%, 75%);
+    --placeholder-txt:hsl(0, 0%, 75%,0.5);
+    --white:hsl(0, 0%, 100%);
+    --boxshadow-card:rgba(100, 100, 111, 0.2);
+    --hover:hsl(220, 100%, 71%);
+}
+body{
+    position: relative;
+}
+ul{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    color: var(--white);
+}
+img{
+    display: block;
+    width: 100%;
+}
+.container{
+    max-width:89%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+html,body{
+    max-width: 100%;
+}
+header{
+    padding: 66px 0px 66px;
+}
+header nav ul{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex: 1;
+}
+
+header nav li a{
+    color: var(--Very-Dark-Blue);
+    font-family: var(--Raleway-font);
+    display: block;
+    padding: 0px 0px;
+    margin-left: 56px;
+    font-weight: 700;
+}
+h1{
+    font-family: var(--Raleway-font);
+    line-height: 1.4;
+    margin-bottom: 20px;
+}
+.hero-section  h1{
+    font-size: 2.50em;
+}
+p{
+    font-family: var(--Open-Sans-font);
+    font-size: 1.09em;
+    font-weight: 600;
+    color: var(--Desaturated-Blue);
+}
+form{
+    display: flex;
+    align-items: center;
+    column-gap: 16px;
+    width: 100%;
+}
+.send-mail{
+    margin-top:25px;
+}
+input,button{
+    border: none;
+}
+input[type='email']{
+    width: 54.4%;
+    padding: 17px 20px 9px;
+    outline: none;
+    border-radius: 4px;
+}
+#email{
+    border: 1.9px solid var(--border-input);
+}
+.btn{
+    width: 34%;
+    padding: 15px 0px 13px;
+    background-color: var(--Bright-Blue);
+    color: var(--Light-Grayish-Blue);
+    font-family: var(--Raleway-font);
+    font-weight: 600;
+    border-radius: 5px;
+    font-size: 0.88em;
+    cursor: pointer;
+}
+.btn:hover{
+    transition: background-color 0.3s ease-in-out;
+    background-color: hsl(221, 100%, 71%);
+}
+.hero-section .image{
+    width: 50%;
+}
+.hero-section .content{
+    width: 46%;
+    margin-top: 78px;
+}
+.hero-section{
+    margin-top: 87px;
+}
+input::placeholder{
+    font-family: var(--Open-Sans-fontt);
+    font-weight: 500;
+    font-size: 1.05em;
+    color: var(--placeholder-txt);
+    letter-spacing: 0.88px;
+}
+main{
+    padding-top: 13rem;
+}
+.productivity-section{
+    background-color: var(--bg-section);
+    position: relative;
+    padding: 60px 0px 106px;
+}
+
+.productivity-section .bg-curve{
+    position: absolute;
+    width: 100%;
+    height: 114px;
+    top: -114px;
+    background: url('../images/bg-curve-desktop.svg')center no-repeat;
+    background-size:100% 100%;
+}
+.productivity-section .content{
+    width: 52%;
+}
+.productivity-section .image{
+    width: 42%;
+    margin-top: 30px;
+}
+.productivity-section h1{
+    font-size: 2.54em;
+}
+.productivity-section .paragraphs{
+    margin-top: 35px;
+}
+.productivity-section .parag{
+    margin-bottom: 20px;
+    padding-right: 137px;
+    font-size: 0.964em;
+    line-height: 1.43;
+}
+.productivity-section .link{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 8px;
+    border-bottom: 2px solid var(--Moderate-Cyan);
+    width: fit-content;
+    padding-bottom: 3px;
+    margin-bottom: 43px;
+}
+.productivity-section .link a{
+    font-family: var(--Open-Sans-font);
+    font-size: 0.977em;
+    font-weight: 600;
+    color: var(--Moderate-Cyan);
+}
+.productivity-section .link:hover a{
+    color:var(--Moderate-Cyan-hover) ;
+}
+.productivity-section .link:hover{
+    border-bottom-color: var(--Moderate-Cyan-hover);
+}
+.productivity-section .card{
+    max-width: 357px;
+    background-color:var(--white);
+    padding:26px 33px 20px;
+    border-radius: 7px;
+    box-shadow: var(--boxshadow-card) 0px 7px 29px 0px;
+}
+.productivity-section .card .quotes-image{
+    width: 17px;
+}
+.productivity-section .card p{
+    font-size: 0.85em;
+    font-weight: 600;
+    padding: 7px 0 11px;
+    line-height: 1.8;
+}
+.productivity-section .card figure{
+    display: flex;
+    column-gap: 7px;
+}
+.productivity-section .card figure .avatar-testimonial{
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.productivity-section .card figure .avatar-testimonial img{
+    border-radius: 50%;
+}
+.productivity-section .card figure figcaption{
+    display: flex;
+    flex-direction: column;
+    font-family: var(--Open-Sans-font);
+}
+.productivity-section .card figure figcaption span:first-child{
+    font-weight: 700;
+    font-size: 0.75em;
+}
+.productivity-section .card figure figcaption small{
+    font-size: 0.55em;
+}
+.signup-section{
+    display: flex;
+    padding: 102px 0px 87px;
+    background-color: var(--Desaturated-Blue);
+}
+.signup-section .txt p,.signup-section h1{
+    color: var(--white);
+}
+.signup-section h1{
+    font-size: 2.02em;
+}
+.signup-section .txt p{
+    font-weight: 400;
+    font-size: 1.070em;
+    padding-right: 100px;
+}
+.signup-section .txt{
+    width: 50%;
+}
+.signup-section .singup{
+    width: 40.7%;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 11px;
+}
+.signup-section .singup #emailx{
+    border: none;
+    width: 92%;
+    margin-bottom: 18px;
+    padding-bottom:15px;
+}
+.signup-section .singup #emailx::placeholder{
+    font-size: 0.8em;
+    font-weight: 600;
+}
+.signup-section .singup button{
+    border-radius:unset;
+    width: 38%;
+    padding-bottom: 15px;
+    border-radius: 1px;
+}
+.signup-section .singup button,.signup-section .singup #emailx{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+footer{
+    background-color: var(--Very-Dark-Blue);
+    padding: 108px 0;
+    font-family: var(--Open-Sans-font);
+}
+footer .container{
+    flex-direction: column;
+    row-gap: 21px;
+}
+footer .container .logo{
+    margin-left: 6px;
+}
+footer ul:not(:last-child) li{
+    margin-bottom: 16px;
+}
+footer ul li a:hover{
+    transition: color 0.3s ease-in-out;
+    color:var(--hover);
+}
+footer .container .phon-mail li{
+    display: flex;
+    column-gap: 21px;
+    margin-bottom: 20px;
+}
+footer .container .footer-links-section{
+    width: 86%;
+    display: flex;
+    justify-content: center;
+}
+footer .footer-links-section .links1{
+    margin-left: 14rem;
+}
+footer .footer-links-section .links2{
+    margin-left: 12.66rem;
+}
+footer .footer-links-section .social-media{
+    display: flex;
+    align-items: flex-start;
+    column-gap: 12px;
+    margin-left: 11.44rem;
+}
+footer .footer-links-section .social-media li a{
+    border: 2px solid var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+footer .footer-links-section .social-media li a:hover{
+    transition: all 0.3s ease-in-out;
+    border-color:var(--hover) ;
+    color: var(--hover);
+}
+.attribution{
+    width: 100%;
+    text-align: center;
+}
+@media(max-width:576px){
+    header nav li a{
+        margin-left: 27px;
+        font-size: 0.78em;
+        font-weight: 600;
+    }
+    header nav .logo{
+        width: 27%;
+    }
+    header nav ul{
+        flex: none;
+    }
+    footer .container .footer-links-section{
+        flex-direction: column;
+    }
+    footer .footer-links-section .social-media{
+        justify-content: center;
+    }
+    .productivity-section .card p {
+        font-size: 0.65em;
+    }
+}
+@media(max-width:768px){
+    .productivity-section .container,.hero-section .container{
+        flex-direction: column-reverse;
+        row-gap: 56px;
+        align-items: center;
+    }
+    .productivity-section .content ,.hero-section .container .content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .productivity-section .image,.hero-section .image{
+        width: 100%;
+    }
+    .signup-section .container{
+        flex-direction: column;
+        align-items: center;
+    }
+    .signup-section .txt,.signup-section .singup{
+        width: 100%;
+        text-align: center;
+    }
+    .signup-section .singup #emailx ,.signup-section .singup .btn{
+        width: 100%;
+    }
+    .signup-section .txt p ,.productivity-section .parag{
+        padding-right: 0px;
+    }
+    .container  h1{
+        text-align: center;
+    }
+    .productivity-section .bg-curve{
+        height: 53px;
+        top: -53px;
+        background: url('../images/bg-curve-mobile.svg')center no-repeat;
+        background-size:100% 100%;
+    }
+}
+@media(max-width:992px){
+    .hero-section .container .content{
+        text-align: center;
+    }
+    .container  h1{
+        font-size: 1.50em;
+    }
+    .container  p,.signup-section .txt p{
+        font-size: 0.9em;
+    }
+    form{
+        flex-direction: column;
+    }
+    .hero-section form .btn,.hero-section form input{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+@media(max-width:1400px){
+    .signup-section .singup button{
+        width: 70%;
+    }
+    footer .container .footer-links-section{
+        width: 100%;
+        justify-content: space-between;
+    }
+    footer .footer-links-section .links1,
+    footer .footer-links-section .links2,
+    footer .footer-links-section .social-media{
+        margin-left: 0px;
+    }
+}
