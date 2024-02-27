@@ -438,4 +438,7 @@ footer .footer-links-section .social-media li a:hover{
     footer .footer-links-section .social-media{
         margin-left: 0px;
     }
+    .hero-section .content{
+        margin-top: 0px;
+    }
 }
